@@ -61,6 +61,6 @@ script:
   - moodle-plugin-ci validate
   - moodle-plugin-ci savepoints
   - moodle-plugin-ci mustache || true # report issues, but don't fail the build.
-  - moodle-plugin-ci grunt || [ "$MOODLE_BRANCH" = 'master' ]
+  - moodle-plugin-ci grunt || true # report issues, but don't fail the build.
   - moodle-plugin-ci phpunit --coverage-text --coverage-clover
   - moodle-plugin-ci behat --profile chrome
